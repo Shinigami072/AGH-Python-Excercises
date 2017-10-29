@@ -11,17 +11,16 @@ odświeźanie 0.3s
 import time
 import os
 import random
-random.seed()
-refreshRate = 0.3
-X = 17
-Y = 7
-tablica = [-1];
+refreshRate = 0.3 #co ile odświeżamy
+X = 80 #wymiar X
+Y = 23 #wymiar Y
+tablica = [-1]; #gdzie znajdująsię krople
 
 
 def display():
-    for y in range(Y):
-        for x in range(X):
-            if(x in tablica and tablica.index(x) == y):
+    for y in range(Y): #przechodzimy przez kolejne rzędy
+        for x in range(X): #i kolejne komórki w nich
+            if(x in tablica and tablica.index(x) == y): #jeśli w naszej tablicu znajdziemy x i jego pozycja odpowiada y
                 print("o", end='')
             else:
                 print(".", end='')
@@ -30,18 +29,19 @@ def display():
         
 
 def randomDrop():
-    d = tablica[0];
+    d = tablica[0];# pobieramy element z tablicy
     while(d in tablica):
         d = random.randint(0,X-1) #znajdz mijsce nie zajęte przez kroplę
    
     tablica.insert(0,d)    
     if(len(tablica) > Y):
         tablica.pop() # usuń kroplę, poza widokiem
-    
+
+random.seed()# ustawiamy generator liczb losowych
 while( True ):
-    randomDrop()
-    display()
-    time.sleep(refreshRate)
-    os.system('clear');
+    randomDrop()#losjemy nową kroplę
+    display()#wyświetl klatę deszczu
+    time.sleep(refreshRate)#poczekaj
+    os.system('clear');#wyczyść terminal
 
 
