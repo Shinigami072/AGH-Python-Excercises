@@ -9,28 +9,44 @@ Created on Mon Oct 23 11:46:40 2017
 import time
 import os
 import random
-random.seed()
-refreshRate = 0.3
-X = 79
+
+refreshRate = 0.3 #Odświeżanie
+
+X = 79 #wymiary terminala
 Y = 21
-krok =1;
-maxkrok =min((X-1)//2,(Y-1)//2);
-kierunek =True
+cX = ((X-1)//2)# - środkowy x
+cY = ((Y-1)//2)# - środkowy y
+
+bok =1; #wielkość obecnego boku/2
+
+maxBok =min((X-1)//2,(Y-1)//2); #maksymalna wielkość boku /2
+
+kierunek =True # True - rośniemy, False - malejemy
+
+random.seed()
 while(True):
+    
     for y in range(Y):
-        for x in range(X):
-            if max(( abs(((X-1)//2)-x), abs(((Y-1)//2)-y) ))== krok:
+        for x in range(X):#przechodzimy przezkażdy punkt (x,y) i wypełniamy go odpowiednim znakiem
+            #max(a,b) - większa z a i b
+            # abs(a) - modół z a
+            # abs(cX-x) - odległość x od środkowego X
+            #odległość punktu (x,y) od środka == bok
+            if max(( abs(cX-x), abs(cY-y) )) == bok:  
                 print('█', end='')
             else:
                 print(' ', end='')
-        print()
+        print()#przechdzimy do kolejnego rzędu
+        
     print()
     
-    if(kierunek):
-        krok+=1
+    if(kierunek):#zwiększenie/ zmniejszenie boku
+        bok+=1
     else:
-        krok-=1
-    if(krok-1 <0 or krok+1>maxkrok):
+        bok-=1
+        
+    if(bok-1 <0 or bok+1>maxBok):# sprawdzenie czy powinniśmy zmienić kierunek
         kierunek=not kierunek
-    time.sleep(refreshRate)
+        
+    time.sleep(refreshRate) #czekanie na odświerzenie
     os.system('clear');
