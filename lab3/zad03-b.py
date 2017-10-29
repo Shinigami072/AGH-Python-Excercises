@@ -10,7 +10,7 @@ import time
 import os
 import random
 
-refreshRate = 0.3 #Odświeżanie
+refreshRate = 0.3 #odświeżanie
 
 X = 79 #wymiary terminala
 Y = 21
@@ -29,14 +29,14 @@ while(True):
     for y in range(Y):
         for x in range(X):#przechodzimy przezkażdy punkt (x,y) i wypełniamy go odpowiednim znakiem
             #max(a,b) - większa z a i b
-            # abs(a) - modół z a
+            # abs(a) - moduł z a
             # abs(cX-x) - odległość x od środkowego X
             #odległość punktu (x,y) od środka == bok
             if max(( abs(cX-x), abs(cY-y) )) == bok:  
                 print('█', end='')
             else:
                 print(' ', end='')
-        print()#przechdzimy do kolejnego rzędu
+        print()#przechodzimy do kolejnego rzędu
         
     print()
     
@@ -48,5 +48,5 @@ while(True):
     if(bok-1 <0 or bok+1>maxBok):# sprawdzenie czy powinniśmy zmienić kierunek
         kierunek=not kierunek
         
-    time.sleep(refreshRate) #czekanie na odświerzenie
+    time.sleep(refreshRate) #czekanie na odświeżenie
     os.system('clear');
