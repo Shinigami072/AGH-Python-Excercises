@@ -29,3 +29,6 @@ wszyskie rozwiązania są udostępnione na licencji  GNU/GPL
 |zad-05-b.py|demonstarcja kumulacji błędu dodawania floata
 |zad-05-c.py|program pokazujący w której ćwiartce układu współrzędnych jesteśmy
 |zad-05-d.py|program liczący liczby pierwsze(wesja nie zoptymalizowana)
+|zad-05-d-b.py|program liczący liczby pierwsze, pierwsza próba implementacji sita eratosthenesa - czas potrzebny na modyfikację listy powduję że ten program nie jest optymalny(wesja nie zoptymalizowana)
+|zad-05-d-c.py|program liczący liczby pierwsze, dróga próba implementacji sita eratosthenesa - jest możliwe zmniejszenie liczy pętli potrzebnych do wykonania porgramu (wesja nie zoptymalizowana)
+|zad-05-d-d.py|program liczący liczby pierwsze, ostateczna wersja implementacji sita eratosthenesa

@@ -12,7 +12,8 @@ import math
 def pierwsze(n):
    
     #jeżeli n<2 brak liczb pierwszych
-    if(n<2)
+    if(n<2):
+        
         return [];
     
     pierwsze = [2]
