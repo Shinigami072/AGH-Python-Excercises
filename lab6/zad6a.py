@@ -34,8 +34,15 @@ def podstawieniowy(tekst,alfabet):
     
     for (i,c) in enumerate(result):
         result[i] = alfabet[(ord(c)-ord('a'))];
-        print(ord(c),ord('a'),(ord(c)-ord('a')),alfabet[(ord(c)-ord('a'))])
-        
+        print(ord(c),ord('a'),(ord(c)-ord('a')),c,alfabet[(ord(c)-ord('a'))])
+    return "".joint(result);
+def dePodstawieniowy(tekst,alfabet):
+    result = list(prep(tekst))
+    
+    for (i,c) in enumerate(result):
+        result[i] = alfabet[(ord(c)-ord('a'))];
+        print(ord(c),ord('a'),(ord(c)-ord('a')),c,alfabet[(ord(c)-ord('a'))])
+    return "".joint(result);
 s = input()
 print (s,prep(s),cezar(s,1),deCezar(cezar(s,1),1))
-print (s,prep(s),podstawieniowy(s,"abcdefgi"))
+print (s,prep(s),podstawieniowy(s,"abcdefghijklmnopqrstuvwxyz"))
