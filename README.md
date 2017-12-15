@@ -32,3 +32,24 @@ wszyskie rozwiązania są udostępnione na licencji  GNU/GPL
 |zad-05-d-b.py|program liczący liczby pierwsze, pierwsza próba implementacji sita eratosthenesa - czas potrzebny na modyfikację listy powduję że ten program nie jest optymalny(wesja nie zoptymalizowana)
 |zad-05-d-c.py|program liczący liczby pierwsze, dróga próba implementacji sita eratosthenesa - jest możliwe zmniejszenie liczy pętli potrzebnych do wykonania porgramu (wesja nie zoptymalizowana)
 |zad-05-d-d.py|program liczący liczby pierwsze, ostateczna wersja implementacji sita eratosthenesa
+
+|lab-6            | dnia:06-11-2017
+|------------------|--------------------------
+|01|Szyfrowanie|
+
+|lab-7            | dnia:06-11-2017
+|------------------|--------------------------
+|01|usówanie liczb pierwszych z ciągu|
+|02|liczenie optymalnego pocięcia prętu
+
+|lab-8            | dnia:X-11-2017
+|------------------|--------------------------
+|01.py| Implementacja bubble sort ,insetrion sort, merge sort
+
+|lab-9            | dnia:06-12-2017
+|------------------|--------------------------
+|01.py| Implementacja quick sort , merge sort, heap sort
+
+|lab-10            | dnia:13-12-2017
+|------------------|--------------------------
+|01.py| Implementacja listy dwókierkunkowej
