@@ -24,23 +24,24 @@ def pierwsze(n):
 
 
 
-d = ((input()).split(" "))
-d = [int(i) for i in d]
-print (d)
-counts = [0]*(max(d)+1)
+d = ((input()).split(" ")) #pobieramy linię z wejścia - dzielimy ją za pomocą spacji na tablicę
+d = [int(i) for i in d]#tworzymy tablicę intów stworzonych ze stringów z oryginalnej tablicy
+print (d) #wyświetlamy tablicę
+counts = [0]*(max(d)+1) #tworzymy tablicę liczników długości największego elementu w tablicy
+#w tej tablicy na indexie i znajduje się ilość powtórzeń liczby i
 for i in d:
-    counts[i]+=1;
+    counts[i]+=1; #przechodzimy przez wszyskie liczby w d i zwięksmy odpowiadający im licznik
     
-print (counts)
-pierw = pierwsze(max(d));
-print (pierw)
-delete = []
-for i in d:
-    if(i in pierw and not i in delete):
-        if(counts[i]%2 != 0):
-            delete.append(i);
+print (counts) #wyświetlamy utworzoną tablicę
+pierw = pierwsze(max(d)); #używamy funkcji do utworzenia tablicy kolejnych liczb pierwszych
+print (pierw) # wyświetlamy je
+delete = [] #tworzymy listę do ununięcia
+for i in d: #przechodzimy przez naszą tablice wyjściową
+    if(i in pierw and not i in delete):#jeżeli dana liczba jest pierwsza i nie oznaczyliśmy jej do usunięcia
+        if(counts[i]%2 != 0):#sprawdzamy czy trzeba  ją usunąć
+            delete.append(i);#jeżeli tak dopisujemy do listy
             
 for i in delete:
-    while(i in d):
+    while(i in d):#usuwamy wszyskie wystąpienia w d
         d.remove(i)
-print(d);            
+print(d);            #wyświetlamy tablicę końcową
